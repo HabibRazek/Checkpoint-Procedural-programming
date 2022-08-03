@@ -1,11 +1,9 @@
-ALGORITHM 
+ALGORITHM insertionSort
 VAR
-    set_declarations
+    i, key, j,n:INTEGER;
+    int[] :int : ARRAY_OF INTEGER[];
 BEGIN
-    FUNCTION insertionSort(int[] arr, int n)
-{
-    int i, key, j;
-    FOR i FROM 0 TO n - 1 STEP 1 DO
+FOR i FROM 0 TO n - 1 STEP 1 DO
     {
         key = arr[i];
         j = i - 1;
@@ -16,9 +14,6 @@ BEGIN
         }
         arr[j + 1] = key;
     }
-    return arr;
-}
-
-
 END
+
 
