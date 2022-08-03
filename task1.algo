@@ -1,17 +1,26 @@
-FUNCTION Dot_product(v1,v2:FLOAT): FLOAT
-    BEGIN
-        ps:=v1*v2;
-        Write("La produit scalaire de v1, v2 est egale :");
-        RETURN ps ;
-    END
-
-ALGORITHM Dot_product
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
 VAR
-    ps:FLOAT;
+    tmp : INTEGER;
 BEGIN
-    IF (Dot_product(v1,v2) == 0) THEN
-        Write("v1 and v2 are orthogonal");
-        ELSE
-        Write("v1 and v2 are not orthogonal");
-    END_IF
+    tmp := xp;
+    xp := yp;
+    yp := tmp;
+END
+ALGORITHM insertionSort
+VAR
+    arr: ARRAY_OF_INTEGER[10];
+    i,j: INTEGER;
+BEGIN
+    Write("Write the length of the array, it must be <= to 10.")
+    Read (arr);
+
+    FOR i FROM 1 to arr.length-1 STEP 1 DO
+    j=i;
+    WHILE (j>0 && arr[j-1]> arr[j] ) THEN
+    swap (arr[j-1], arr[j]);
+    j=j-1;
+    END_WHILE;
+    END_FOR;
+
+END
 END

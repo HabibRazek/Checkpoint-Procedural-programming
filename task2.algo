@@ -1,7 +1,7 @@
 ALGORITHM insertionSort
 VAR
     i, key, j,n:INTEGER;
-    int[] :int : ARRAY_OF INTEGER[];
+    arr : ARRAY_OF INTEGER[];
 BEGIN
 FOR i FROM 0 TO n - 1 STEP 1 DO
     {
