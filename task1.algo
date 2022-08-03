@@ -1,0 +1,18 @@
+ALGORITHM Dot_product
+VAR
+    ps:FLOAT;
+BEGIN
+    FUNCTION Dot_product(v1,v2): FLOAT
+    VAR
+        // nothing
+    BEGIN
+        ps:=v1*v2;
+        Write("La produit scalaire de v1, v2 est egale :")
+        RETURN ps ;
+    END
+    IF (Dot_product(v1,v2) == 0) THEN
+        Write("v1 and v2 are orthogonal")
+        ELSE
+        Write("v1 and v2 are not orthogonal")
+    END_IF
+END
